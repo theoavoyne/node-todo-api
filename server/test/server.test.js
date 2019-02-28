@@ -160,7 +160,7 @@ describe('PATCH /todos/:id', () => {
         expect(res.body.todo.completed).toBe(true);
         expect(typeof res.body.todo.completedAt).toBe('number');
       })
-      .end(done)
+      .end(done);
   });
 
   it('Should clear completedAt when todo is not completed', (done) => {
@@ -179,6 +179,6 @@ describe('PATCH /todos/:id', () => {
         expect(res.body.todo.completed).toBe(false);
         expect(res.body.todo.completedAt).toBe(null);
       })
-      .end(done)
+      .end(done);
   });
 });
