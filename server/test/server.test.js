@@ -132,7 +132,7 @@ describe('DELETE /todos/:id', () => {
       });
   });
 
-  it('Should remove a todo', (done) => {
+  it('Should not remove a todo of another user', (done) => {
     var hexId = todos[0]._id.toHexString();
 
     request(app)
